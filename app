@@ -1,7 +1,7 @@
-import { request } from "express";
-
+//import { request } from "express";
+//se debe llamar app.js
 const btnAgregar = document.getElementById("btnAgregar").addEventListener("click", (e)=>){
-
+ var request=new XMLHttpRequest(); //te falto crearlo aqui
  let Nombre = parseInt(document.getElementById("Nombre").value);
  let Grado = parseInt(document.getElementById("Grado").value);
  let Grupo = parseInt(document.getElementById("Grupo").value);
