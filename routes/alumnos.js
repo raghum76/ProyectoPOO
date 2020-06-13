@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router= Router();
 const _ =require('underscore');
 
-const alumnos=require('..base.json');
+const alumnos=require('../base.json');
 
 router.get('/',(req,res)=>{
     res.json(alumnos);
@@ -41,7 +41,7 @@ router.put('/:id', (req,res)=>{
 router.delete('/:id', (req,res)=>{
     const { id }= req.params;
     _.each(alumnos, (alumnos,i)=>{
-        if(alumnos.id=id){
+        if(alumnos.id=id){//dejaste el codigo que tenias antes, no donde usabas una variable temporal
             alumnos.splice(i,1);
         }
         else{res.status(500).json({error='Hubo un error'});}
